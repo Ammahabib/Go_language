@@ -17,6 +17,11 @@ func(c car ) kmh() float64{
 	return float64(c.gas_pedal)*(c.top_speed_kmh/usixteenbitmax) 
 
 } 
+func anonymous_function () func(string){
+	return func(msg string){
+		fmt.Print(msg)
+	}
+}
 
 
 func main () {
@@ -24,6 +29,8 @@ func main () {
 	 a_car := car{22341,0,12561,225.0}
 	 fmt.Println(a_car.gas_pedal)
 	 fmt.Println(a_car.kmh())
+	print_function := anonymous_function()
+	print_function("this language is too good to be true ")
 	 
 	
 }
